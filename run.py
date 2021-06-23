@@ -5,22 +5,22 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", page_title="About")
 
 
 @app.route("/podcast")
 def podcast():
-    return render_template("podcast.html")
+    return render_template("podcast.html", page_title="Podcasts")
 
 
 @app.route("/contact")
 def contact():
-    return render_template("contact.html")
+    return render_template("contact.html", page_title="Contact")
 
 
 @app.route("/archive")
 def archive():
-    return render_template("archive.html")
+    return render_template("archive.html", page_title="Archive")
 
 
 if __name__ == "__main__":
